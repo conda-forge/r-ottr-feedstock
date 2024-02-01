@@ -1,4 +1,4 @@
-{% set version = '1.4.0' %}
+{% set version = "1.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ottr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ottr/ottr_{{ version }}.tar.gz
-  sha256: 3a4d51e49e77f2b29883be008f073bf245f47bbcdc32223c5199a4d947018172
+  sha256: 33899bb9bb689d402913b6e93ce3b230ac6897989863a25c4fa06b7a4f4937ac
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -45,8 +45,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=ottr
   license: BSD-3-Clause
-  summary: An R autograding extension for Otter-Grader (<https://otter-grader.readthedocs.io>).
-    It supports grading R scripts, R Markdown documents, and R Jupyter Notebooks.
+  summary: An R autograding extension for Otter-Grader (<https://otter-grader.readthedocs.io>). It supports grading R scripts, R Markdown documents, and R Jupyter Notebooks.
   license_family: BSD
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause'
