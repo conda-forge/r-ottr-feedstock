@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ottr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ottr/ottr_{{ version }}.tar.gz
-  sha256: 12b6cdba5d7dd194dcd7db7a7bee533e375ab19d520eff5ab5bfb9feb78ebb47
+  sha256: 01fcde09cd9a431588c3666f3c0b8843290195e022af058dfe9d17de83f88e3e
 
 build:
   number: 0
